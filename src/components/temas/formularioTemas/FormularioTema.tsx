@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Tema from '../../../models/Tema';
@@ -104,6 +104,7 @@ function FormularioTema() {
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTema}>
         <div className="flex flex-col gap-2">
+
           <label htmlFor="descricao">Descrição do tema</label>
           <input
             type="text"

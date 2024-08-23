@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
@@ -57,8 +57,8 @@ function Cadastro() {
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResposta)
         toastAlerta('Usuário cadastrado com sucesso', 'sucesso')
 
-      } catch (error) {
-        toastAlerta('Usuário cadastrado com sucesso', 'sucesso')
+      } catch (error:any) {
+        toastAlerta('erro ao cadastrar usuário', 'erro')
       }
 
     } else {

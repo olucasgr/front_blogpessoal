@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
@@ -39,6 +39,7 @@ function ListaPostagens() {
   useEffect(() => {
     buscarPostagens();
   }, [postagens.length]);
+  
   return (
     <>
       {postagens.length === 0 && (
